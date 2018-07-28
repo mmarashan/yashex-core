@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Ola's blog</title>
+    </head>
+    <body>
+        {% for post in messages %}
+            <div>
+                <p>published: {{ post.date_created }}</p>
+                <h1><a href="">{{ post.text }}</a></h1>
+                <p>{{ post.type}}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
