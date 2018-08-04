@@ -1,0 +1,58 @@
+version: '3'
+services:
+
+  mq:
+    image: rabbitmq:management-alpine
+    ports:
+      - "5672:5672"
+
+#  db:
+#    image: verteen/docker_postgres:latest
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+#      - postgres_backups:/backups
+#    env_file:
+#      - ./prod.env
+#    ports:
+#      - "5432:5432"
+
+  core:
+    image: django_base
+    build:
+        context: .
+        dockerfile: Dockerfile
+    env_file:
+      - ./prod.env
+    volumes:
+      - .:/app
+      - static:/static
+      - media:/media
+      - logs:/logs
+      - /tmp:/tmp
+    ports:
+      - "8000:8000"
+    command:  bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+#    depends_on:
+#      - db
+  celery:
+    image: django_base
+    build:
+        context: .
+        dockerfile: Dockerfile
+    env_file:
+      - ./prod.env
+    volumes:
+      - .:/app
+      - static:/static
+      - media:/media
+      - logs:/logs
+      - /tmp:/tmp
+    command:  bash -c "celery worker -A yashex_core.celery -B -l info"
+
+volumes:
+#    postgres_data: {}
+#    postgres_backups: {}
+    media:
+      external: true
+    static: {}
+    logs: {}

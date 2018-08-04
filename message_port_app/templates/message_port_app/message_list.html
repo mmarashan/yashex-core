@@ -1,13 +1,14 @@
 <html>
     <head>
-        <title>Ola's blog</title>
+        <title>Message list</title>
     </head>
     <body>
-        {% for post in messages %}
+        {% for message in messages %}
             <div>
-                <p>published: {{ post.date_created }}</p>
-                <h1><a href="">{{ post.text }}</a></h1>
-                <p>{{ post.type}}</p>
+                <p>-----------------------</p>
+                <p>published: {{ message.date_created }} by {{message.sender_address}}</p>
+                <p><a href="">{{ message.type}}:{{ message.text }}</a></p>
+                <p>-----------------------</p>
             </div>
         {% endfor %}
     </body>
