@@ -1,4 +1,3 @@
-import serial
 import serial.tools.list_ports
 import time
 import sys
@@ -12,7 +11,7 @@ class ArduinoClient():
         print(ports)
 
         for p in ports:
-            print(p[1])
+            #print(p[1])
             #if "Arduino" in p[1]:
             if p[1]:
                 ser = serial.Serial(p[0], 9600, dsrdtr=False, timeout=2.0, rtscts=True, xonxoff=False)
@@ -20,16 +19,18 @@ class ArduinoClient():
             else:
                 print("No Arduino Device was found connected to the computer")
 
-
     def init(self):
         self.serial_port = self.get_arduino_serial()
         # sudo chown maxim /dev/ttyACM0
         # sudo ln - s /dev/ttyACM0 /dev/ ttyUSB0
 
-
-    def read(self):
-        read_byte = self.serial_port.read()
-        return read_byte
+    def read(self, byte_count):
+        i = 0
+        text = ''
+        while (i < byte_count):
+            text = text+self.serial_port.read().decode("utf-8")
+            i = i + 1
+        return text
 
     def write(self, str):
         self.serial_port.write(str)

@@ -23,6 +23,8 @@ services:
         dockerfile: Dockerfile
     env_file:
       - ./prod.env
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
     volumes:
       - .:/app
       - static:/static
@@ -32,8 +34,9 @@ services:
     ports:
       - "8000:8000"
     command:  bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-#    depends_on:
-#      - db
+    depends_on:
+      - celery
+
   celery:
     image: django_base
     build:
@@ -41,14 +44,18 @@ services:
         dockerfile: Dockerfile
     env_file:
       - ./prod.env
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
     volumes:
       - .:/app
       - static:/static
       - media:/media
+#      - /dev/ttyACM0:/dev/ttyACM0
       - logs:/logs
       - /tmp:/tmp
-    command:  bash -c "celery worker -A yashex_core.celery -B -l info"
-
+    command:  bash -c "chown -R $USER /dev/ttyACM0 && chmod -R 700 /dev/ttyACM0 && celery worker -A yashex_core.celery -B -l info"
+    depends_on:
+      - mq
 volumes:
 #    postgres_data: {}
 #    postgres_backups: {}
