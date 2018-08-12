@@ -50,7 +50,7 @@ services:
       - .:/app
       - static:/static
       - media:/media
-#      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyACM0:/dev/ttyACM0
       - logs:/logs
       - /tmp:/tmp
     command:  bash -c "chown -R $USER /dev/ttyACM0 && chmod -R 700 /dev/ttyACM0 && celery worker -A yashex_core.celery -B -l info"

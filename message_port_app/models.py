@@ -23,11 +23,10 @@ class Message(models.Model):
         return '{}-{}-{}'.format(self.sender_address, self.type, self.text)
 
     def create_message(sender_address, reciever_address, text, type):
-        print("Add new message")
         arduino_message = Message.objects.create()
         arduino_message.sender_address = sender_address
         arduino_message.sender_address = reciever_address
         arduino_message.text = text
         arduino_message.type = type
         arduino_message.save()
-        print("End add new message")
+        print("Add new message from "+sender_address + ' : '+text)

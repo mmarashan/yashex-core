@@ -6,7 +6,8 @@ import glob
 class ArduinoClient():
     serial_port = None
 
-    def get_arduino_serial(self):
+    @staticmethod
+    def get_arduino_serial():
         ports = list(serial.tools.list_ports.comports())
         print(ports)
 
@@ -19,18 +20,27 @@ class ArduinoClient():
             else:
                 print("No Arduino Device was found connected to the computer")
 
-    def init(self):
-        self.serial_port = self.get_arduino_serial()
+    @staticmethod
+    def init():
+        if ArduinoClient.serial_port is None:
+            ArduinoClient.serial_port = ArduinoClient.get_arduino_serial()
+            print('INIT ARDUINO CONNECTION')
         # sudo chown maxim /dev/ttyACM0
-        # sudo ln - s /dev/ttyACM0 /dev/ ttyUSB0
+        # sudo ln - s /dev/ttyACM0 /dev/ttyACM0
 
-    def read(self, byte_count):
+    @staticmethod
+    def read(byte_count):
         i = 0
         text = ''
-        while (i < byte_count):
-            text = text+self.serial_port.read().decode("utf-8")
+        end_message_symbol='}'
+        current_symbol = ''
+        while (current_symbol != end_message_symbol):
+            current_symbol = ArduinoClient.serial_port.read().decode("utf-8")
+            print('Read symbol : '+current_symbol)
+            text = text+current_symbol
             i = i + 1
         return text
 
-    def write(self, str):
-        self.serial_port.write(str)
+    @staticmethod
+    def write(str):
+        ArduinoClient.serial_port.write(str.encode())
