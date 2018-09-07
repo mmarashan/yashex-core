@@ -1,5 +1,4 @@
 """yashex_core URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
@@ -20,4 +19,6 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'', include('message_port_app.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/', include('message_port_app.api.urls', namespace='api'))
 ]

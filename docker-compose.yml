@@ -6,6 +6,16 @@ services:
     ports:
       - "5672:5672"
 
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /home/ubuntu/spa-mat:/src
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - core
+
 #  db:
 #    image: verteen/docker_postgres:latest
 #    volumes:

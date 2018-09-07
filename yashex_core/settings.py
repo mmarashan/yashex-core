@@ -25,7 +25,7 @@ SECRET_KEY = 'v)5mu&_gbf5au_cz$pc0f=qiee-o8-o5w8)l+h)z@2i+8v74!i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cryptoopensoul.ru']
 
 
 # Application definition
@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'message_port_app'
+]
+
+VENDOR_APPS = [
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
