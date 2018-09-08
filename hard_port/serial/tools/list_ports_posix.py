@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# This is a module that gathers a list of serial ports on POSIXy systems.
+# This is a module that gathers a list of serial_ ports on POSIXy systems.
 # For some specific implementations, see also list_ports_linux, list_ports_osx
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
@@ -99,14 +99,14 @@ else:
     import serial
     sys.stderr.write("""\
 don't know how to enumerate ttys on this system.
-! I you know how the serial ports are named send this information to
+! I you know how the serial_ ports are named send this information to
 ! the author of this module:
 
 sys.platform = {!r}
 os.name = {!r}
 pySerial version = {}
 
-also add the naming scheme of the serial ports and with a bit luck you can get
+also add the naming scheme of the serial_ ports and with a bit luck you can get
 this module running...
 """.format(sys.platform, os.name, serial.VERSION))
     raise ImportError("Sorry: no implementation for your platform ('{}') available".format(os.name))

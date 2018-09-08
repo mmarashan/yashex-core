@@ -5,7 +5,7 @@
 # requests to do so.
 #
 # The purpose of this module is that applications using pySerial can connect to
-# TCP/IP to serial port converters that do not support RFC 2217.
+# TCP/IP to serial_ port converters that do not support RFC 2217.
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
 # (C) 2001-2015 Chris Liechti <cliechti@gmx.net>
@@ -145,7 +145,7 @@ class Serial(SerialBase):
     # emulate write timeouts
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -186,7 +186,7 @@ class Serial(SerialBase):
 
     def write(self, data):
         """\
-        Output the given byte string over the serial port. Can block if the
+        Output the given byte string over the serial_ port. Can block if the
         connection is blocked. May raise SerialException if the connection is
         closed.
         """

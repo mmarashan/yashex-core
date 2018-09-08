@@ -29,7 +29,7 @@ def numsplit(text):
 
 
 class ListPortInfo(object):
-    """Info collection base class for serial ports"""
+    """Info collection base class for serial_ ports"""
 
     def __init__(self, device=None):
         self.device = device

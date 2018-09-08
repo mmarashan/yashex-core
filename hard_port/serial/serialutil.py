@@ -88,7 +88,7 @@ PARITY_NAMES = {
 
 
 class SerialException(IOError):
-    """Base class for serial port related exceptions."""
+    """Base class for serial_ port related exceptions."""
 
 
 class SerialTimeoutException(SerialException):
@@ -485,7 +485,7 @@ class SerialBase(io.RawIOBase):
     def rs485_mode(self):
         """\
         Enable RS485 mode and apply new settings, set to None to disable.
-        See serial.rs485.RS485Settings for more info about the value.
+        See serial_.rs485.RS485Settings for more info about the value.
         """
         return self._rs485_mode
 

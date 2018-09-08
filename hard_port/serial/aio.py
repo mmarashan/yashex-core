@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 #
 # Python Serial Port Extension for Win32, Linux, BSD, Jython
-# module for serial IO for POSIX compatible systems, like Linux
+# module for serial_ IO for POSIX compatible systems, like Linux
 # see __init__.py
 #
 # (C) 2015 Chris Liechti <cliechti@gmx.net>
 #
 # SPDX-License-Identifier:    BSD-3-Clause
 """\
-Support asyncio with serial ports. EXPERIMENTAL
+Support asyncio with serial_ ports. EXPERIMENTAL
 
 Posix platforms only, Python 3.4+ only.
 
-Windows event loops can not wait for serial ports with the current
+Windows event loops can not wait for serial_ ports with the current
 implementation. It should be possible to get that working though.
 """
 import asyncio
@@ -35,7 +35,7 @@ class SerialTransport(asyncio.Transport):
         loop.call_soon(loop.add_reader, self.serial.fd, self._read_ready)
 
     def __repr__(self):
-        return '{self.__class__.__name__}({self._loop}, {self._protocol}, {self.serial})'.format(self=self)
+        return '{self.__class__.__name__}({self._loop}, {self._protocol}, {self.serial_})'.format(self=self)
 
     def close(self):
         if self._closing:

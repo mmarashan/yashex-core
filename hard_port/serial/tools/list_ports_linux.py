@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# This is a module that gathers a list of serial ports including details on
+# This is a module that gathers a list of serial_ ports including details on
 # GNU/Linux systems.
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
@@ -10,7 +10,7 @@
 
 import glob
 import os
-from serial.tools import list_ports_common
+from hard_port.serial.tools import list_ports_common
 
 
 class SysFS(list_ports_common.ListPortInfo):
@@ -33,7 +33,7 @@ class SysFS(list_ports_common.ListPortInfo):
             self.device_path = None
             self.subsystem = None
         # check device type
-        if self.subsystem == 'usb-serial':
+        if self.subsystem == 'usb-serial_':
             self.usb_interface_path = os.path.dirname(self.device_path)
         elif self.subsystem == 'usb':
             self.usb_interface_path = self.device_path
@@ -50,7 +50,7 @@ class SysFS(list_ports_common.ListPortInfo):
 
             self.vid = int(self.read_line(self.usb_device_path, 'idVendor'), 16)
             self.pid = int(self.read_line(self.usb_device_path, 'idProduct'), 16)
-            self.serial_number = self.read_line(self.usb_device_path, 'serial')
+            self.serial_number = self.read_line(self.usb_device_path, 'serial_')
             if num_if > 1:  # multi interface devices like FT4232
                 self.location = os.path.basename(self.usb_interface_path)
             else:
@@ -60,7 +60,7 @@ class SysFS(list_ports_common.ListPortInfo):
             self.product = self.read_line(self.usb_device_path, 'product')
             self.interface = self.read_line(self.device_path, 'interface')
 
-        if self.subsystem in ('usb', 'usb-serial'):
+        if self.subsystem in ('usb', 'usb-serial_'):
             self.apply_usb_info()
         #~ elif self.subsystem in ('pnp', 'amba'):  # PCI based devices, raspi
         elif self.subsystem == 'pnp':  # PCI based devices
@@ -88,17 +88,17 @@ class SysFS(list_ports_common.ListPortInfo):
 
 
 def comports(include_links=False):
-    devices = glob.glob('/dev/ttyS*')           # built-in serial ports
-    devices.extend(glob.glob('/dev/ttyUSB*'))   # usb-serial with own driver
-    devices.extend(glob.glob('/dev/ttyACM*'))   # usb-serial with CDC-ACM profile
+    devices = glob.glob('/dev/ttyS*')           # built-in serial_ ports
+    devices.extend(glob.glob('/dev/ttyUSB*'))   # usb-serial_ with own driver
+    devices.extend(glob.glob('/dev/ttyACM*'))   # usb-serial_ with CDC-ACM profile
     devices.extend(glob.glob('/dev/ttyAMA*'))   # ARM internal port (raspi)
-    devices.extend(glob.glob('/dev/rfcomm*'))   # BT serial devices
-    devices.extend(glob.glob('/dev/ttyAP*'))    # Advantech multi-port serial controllers
+    devices.extend(glob.glob('/dev/rfcomm*'))   # BT serial_ devices
+    devices.extend(glob.glob('/dev/ttyAP*'))    # Advantech multi-port serial_ controllers
     if include_links:
         devices.extend(list_ports_common.list_links(devices))
     return [info
             for info in [SysFS(d) for d in devices]
-            if info.subsystem != "platform"]    # hide non-present internal serial ports
+            if info.subsystem != "platform"]    # hide non-present internal serial_ ports
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # test

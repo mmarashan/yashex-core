@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# backend for serial IO for POSIX compatible systems, like Linux, OSX
+# backend for serial_ IO for POSIX compatible systems, like Linux, OSX
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
 # (C) 2001-2016 Chris Liechti <cliechti@gmx.net>
@@ -35,8 +35,10 @@ import struct
 import sys
 import termios
 
-import serial
-from serial.serialutil import SerialBase, SerialException, to_bytes, \
+import sys
+import importlib
+import hard_port.serial
+from hard_port.serial.serialutil import SerialBase, SerialException, to_bytes, \
     portNotOpenError, writeTimeoutError, Timeout
 
 
@@ -182,7 +184,7 @@ elif plat[:6] == 'darwin':   # OS X
 
     class PlatformSpecific(PlatformSpecificBase):
         osx_version = os.uname()[2].split('.')
-        # Tiger or above can support arbitrary serial speeds
+        # Tiger or above can support arbitrary serial_ speeds
         if int(osx_version[0]) >= 8:
             def _set_special_baudrate(self, baudrate):
                 # use IOKit-specific call to set up high speeds
@@ -371,27 +373,27 @@ class Serial(SerialBase, PlatformSpecific):
         else:
             raise ValueError('Invalid char len: {!r}'.format(self._bytesize))
         # setup stop bits
-        if self._stopbits == serial.STOPBITS_ONE:
+        if self._stopbits == hard_port.serial.STOPBITS_ONE:
             cflag &= ~(termios.CSTOPB)
-        elif self._stopbits == serial.STOPBITS_ONE_POINT_FIVE:
+        elif self._stopbits == hard_port.serial.STOPBITS_ONE_POINT_FIVE:
             cflag |= (termios.CSTOPB)  # XXX same as TWO.. there is no POSIX support for 1.5
-        elif self._stopbits == serial.STOPBITS_TWO:
+        elif self._stopbits == hard_port.serial.STOPBITS_TWO:
             cflag |= (termios.CSTOPB)
         else:
             raise ValueError('Invalid stop bit specification: {!r}'.format(self._stopbits))
         # setup parity
         iflag &= ~(termios.INPCK | termios.ISTRIP)
-        if self._parity == serial.PARITY_NONE:
+        if self._parity == hard_port.serial.PARITY_NONE:
             cflag &= ~(termios.PARENB | termios.PARODD | CMSPAR)
-        elif self._parity == serial.PARITY_EVEN:
+        elif self._parity == hard_port.serial.PARITY_EVEN:
             cflag &= ~(termios.PARODD | CMSPAR)
             cflag |= (termios.PARENB)
-        elif self._parity == serial.PARITY_ODD:
+        elif self._parity == hard_port.serial.PARITY_ODD:
             cflag &= ~CMSPAR
             cflag |= (termios.PARENB | termios.PARODD)
-        elif self._parity == serial.PARITY_MARK and CMSPAR:
+        elif self._parity == hard_port.serial.PARITY_MARK and CMSPAR:
             cflag |= (termios.PARENB | CMSPAR | termios.PARODD)
-        elif self._parity == serial.PARITY_SPACE and CMSPAR:
+        elif self._parity == hard_port.serial.PARITY_SPACE and CMSPAR:
             cflag |= (termios.PARENB | CMSPAR)
             cflag &= ~(termios.PARODD)
         else:
@@ -470,7 +472,7 @@ class Serial(SerialBase, PlatformSpecific):
     # select based implementation, proved to work on many systems
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -526,7 +528,7 @@ class Serial(SerialBase, PlatformSpecific):
             os.write(self.pipe_abort_write_w, b"x")
 
     def write(self, data):
-        """Output the given byte string over the serial port."""
+        """Output the given byte string over the serial_ port."""
         if not self.is_open:
             raise portNotOpenError
         d = to_bytes(data)
@@ -678,7 +680,7 @@ class Serial(SerialBase, PlatformSpecific):
 
     def fileno(self):
         """\
-        For easier use of the serial port instance with select.
+        For easier use of the serial_ port instance with select.
         WARNING: this function is not portable to different platforms!
         """
         if not self.is_open:
@@ -721,12 +723,12 @@ class PosixPollSerial(Serial):
     """\
     Poll based read implementation. Not all systems support poll properly.
     However this one has better handling of errors, such as a device
-    disconnecting while it's in use (e.g. USB-serial unplugged).
+    disconnecting while it's in use (e.g. USB-serial_ unplugged).
     """
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -793,7 +795,7 @@ class VTIMESerial(Serial):
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """

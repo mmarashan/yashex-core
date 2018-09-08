@@ -10,31 +10,27 @@
 import sys
 import importlib
 
-from serial.serialutil import *
+from hard_port.serial.serialutil import *
 #~ SerialBase, SerialException, to_bytes, iterbytes
-
-__version__ = '3.4'
-
-VERSION = __version__
 
 # pylint: disable=wrong-import-position
 if sys.platform == 'cli':
-    from serial.serialcli import Serial
+    from hard_port.serial.serialcli import Serial
 else:
     import os
     # chose an implementation, depending on os
     if os.name == 'nt':  # sys.platform == 'win32':
-        from serial.serialwin32 import Serial
+        from hard_port.serial.serialwin32 import Serial
     elif os.name == 'posix':
-        from serial.serialposix import Serial, PosixPollSerial, VTIMESerial  # noqa
+        from hard_port.serial.serialposix import Serial, PosixPollSerial, VTIMESerial  # noqa
     elif os.name == 'java':
-        from serial.serialjava import Serial
+        from hard_port.serial.serialjava import Serial
     else:
         raise ImportError("Sorry: no implementation for your platform ('{}') available".format(os.name))
 
 
 protocol_handler_packages = [
-    'serial.urlhandler',
+    'serial_.urlhandler',
 ]
 
 

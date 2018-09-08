@@ -1,18 +1,18 @@
-from serial import Serial
-import serial.tools.list_ports
+from hard_port.serial import serialposix
+from hard_port.serial.tools import list_ports_linux
 
 class ArduinoClient():
     serial_port = None
 
     @staticmethod
     def get_arduino_serial():
-        ports = list(serial.tools.list_ports.comports())
+        ports = list(list_ports_linux.comports())
         print(ports)
 
         for p in ports:
             if p[1]:
                 print('Arduino on port : ' + p[1])
-                ser = Serial(p[0], 9600, timeout=0.01)
+                ser = serialposix.Serial(p[0], 9600, timeout=0.01)
                 return ser
             else:
                 print("No Arduino Device was found connected to the computer")

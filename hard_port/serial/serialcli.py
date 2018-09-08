@@ -135,7 +135,7 @@ class Serial(SerialBase):
                 try:
                     self._port_handle.Close()
                 except System.IO.Ports.InvalidOperationException:
-                    # ignore errors. can happen for unplugged USB serial devices
+                    # ignore errors. can happen for unplugged USB serial_ devices
                     pass
                 self._port_handle = None
             self.is_open = False
@@ -151,7 +151,7 @@ class Serial(SerialBase):
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -170,7 +170,7 @@ class Serial(SerialBase):
         return bytes(data)
 
     def write(self, data):
-        """Output the given string over the serial port."""
+        """Output the given string over the serial_ port."""
         if not self.is_open:
             raise portNotOpenError
         #~ if not isinstance(data, (bytes, bytearray)):

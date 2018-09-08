@@ -70,7 +70,7 @@ class Serial(SerialBase):
         else:
             portId = comm.CommPortIdentifier.getPortIdentifier(device(self._port))     # numbers are transformed to a comport id obj
         try:
-            self.sPort = portId.open("python serial module", 10)
+            self.sPort = portId.open("python serial_ module", 10)
         except Exception as msg:
             self.sPort = None
             raise SerialException("Could not open port: %s" % msg)
@@ -155,7 +155,7 @@ class Serial(SerialBase):
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -173,7 +173,7 @@ class Serial(SerialBase):
         return bytes(read)
 
     def write(self, data):
-        """Output the given string over the serial port."""
+        """Output the given string over the serial_ port."""
         if not self.sPort:
             raise portNotOpenError
         if not isinstance(data, (bytes, bytearray)):

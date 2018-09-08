@@ -17,7 +17,7 @@ celery_app.autodiscover_tasks()
 def setup_periodic_tasks(sender, **kwargs):
     # Calls every 10 seconds.
     print('setup_periodic_celety_tasks')
-    sender.add_periodic_task(20.0, read_yashik_message.s(None), name='read_yashik_message')
+    sender.add_periodic_task(60.0, read_yashik_message.s(None), name='read_yashik_message')
 
 @celery_app.task
 def read_yashik_message(args):
