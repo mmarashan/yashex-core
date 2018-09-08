@@ -6,8 +6,9 @@ from . import views
 app_name = "message_port_app"
 
 router = routers.SimpleRouter()
-router.register(r'messages', views.AttachmentViewSet)
+router.register(r'messages', views.MessageViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls))
+    url(r'^', include(router.urls)),
+    url(r'^', include('rest_framework.urls'))
 ]

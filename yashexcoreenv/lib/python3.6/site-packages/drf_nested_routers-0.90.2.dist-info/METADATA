@@ -1,0 +1,49 @@
+Metadata-Version: 2.0
+Name: drf-nested-routers
+Version: 0.90.2
+Summary: Nested resources for the Django Rest Framework
+Home-page: https://github.com/alanjds/drf-nested-routers
+Author: Alan Justino et al.
+Author-email: alan.justino@yahoo.com.br
+License: Apache
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: djangorestframework (>=2.4.3)
+Requires-Dist: Django (>=1.8)
+
+drf-nested-routers
+======================================
+
+|build-status-image| |pypi-version|
+
+Overview
+--------
+
+Nested resources for the Django Rest Framework
+
+Documentation
+-------------
+
+Please see the README on the Github repo page: `<http://github.com/alanjds/drf-nested-routers/>`
+
+.. |build-status-image| image:: https://secure.travis-ci.org/alanjds/drf-nested-routers.svg?branch=master
+   :target: http://travis-ci.org/alanjds/drf-nested-routers?branch=master
+.. |pypi-version| image:: https://img.shields.io/pypi/v/drf-nested-routers.svg
+   :target: https://pypi.python.org/pypi/drf-nested-routers
+
+

@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: django-jwt-auth
+Version: 0.0.2
+Summary: JSON Web Token based authentication for Django
+Home-page: https://github.com/jpadilla/django-jwt-auth
+Author: Jose Padilla
+Author-email: hello@jpadilla.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: PyJWT (>=1.4.0,<2.0.0)
+
+UNKNOWN
+
+

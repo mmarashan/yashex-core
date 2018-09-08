@@ -23,7 +23,7 @@ def setup_periodic_tasks(sender, **kwargs):
 def read_yashik_message(args):
     ArduinoClient.init()
     ArduinoClient.write('sayState\n')
-    result = ArduinoClient.read(25)
+    result = ArduinoClient.read()
     #import re
     #result = re.split(r',', result)[0]
     print('Read from arduino : ' + result)

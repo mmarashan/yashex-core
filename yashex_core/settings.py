@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import rest_framework
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,22 +28,32 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['cryptoopensoul.ru']
 
-
 # Application definition
-
-INSTALLED_APPS = [
+CONTRIB_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'message_port_app'
+    'django.contrib.staticfiles'
 ]
 
 VENDOR_APPS = [
-    'rest_framework'
+    'rest_framework',
 ]
+
+APPS = [
+    'message_port_app'
+]
+
+INSTALLED_APPS = CONTRIB_APPS + VENDOR_APPS + APPS
+
+
+REST_FRAMEWORK = {
+'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework.authentication.SessionAuthentication',
+),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
