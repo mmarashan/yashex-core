@@ -9,7 +9,7 @@
 
 """\
 The settings for RS485 are stored in a dedicated object that can be applied to
-serial ports (where supported).
+serial_ ports (where supported).
 NOTE: Some implementations may only support a subset of the settings.
 """
 
@@ -37,7 +37,7 @@ class RS485(serial.Serial):
     A subclass that replaces the write method with one that toggles RTS
     according to the RS485 settings.
 
-    NOTE: This may work unreliably on some serial ports (control signals not
+    NOTE: This may work unreliably on some serial_ ports (control signals not
           synchronized or delayed compared to data). Using delays may be
           unreliable (varying times, larger than expected) as the OS may not
           support very fine grained delays (no smaller than in the order of
@@ -83,7 +83,7 @@ class RS485(serial.Serial):
     def rs485_mode(self):
         """\
         Enable RS485 mode and apply new settings, set to None to disable.
-        See serial.rs485.RS485Settings for more info about the value.
+        See serial_.rs485.RS485Settings for more info about the value.
         """
         return self._alternate_rs485_settings
 

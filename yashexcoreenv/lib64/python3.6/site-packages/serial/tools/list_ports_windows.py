@@ -1,6 +1,6 @@
 #! python
 #
-# Enumerate serial ports on Windows including a human readable description
+# Enumerate serial_ ports on Windows including a human readable description
 # and hardware information.
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
@@ -131,7 +131,7 @@ KEY_READ = 0x20019
 
 
 def iterate_comports():
-    """Return a generator that yields descriptions for serial ports"""
+    """Return a generator that yields descriptions for serial_ ports"""
     GUIDs = (GUID * 8)()  # so far only seen one used, so hope 8 are enough...
     guids_size = DWORD()
     if not SetupDiClassGuidsFromName(
@@ -177,13 +177,13 @@ def iterate_comports():
 
             # unfortunately does this method also include parallel ports.
             # we could check for names starting with COM or just exclude LPT
-            # and hope that other "unknown" names are serial ports...
+            # and hope that other "unknown" names are serial_ ports...
             if port_name_buffer.value.startswith('LPT'):
                 continue
 
             # hardware ID
             szHardwareID = ctypes.create_unicode_buffer(250)
-            # try to get ID that includes serial number
+            # try to get ID that includes serial_ number
             if not SetupDiGetDeviceInstanceId(
                     g_hdi,
                     ctypes.byref(devinfo),
@@ -295,7 +295,7 @@ def iterate_comports():
 
 
 def comports(include_links=False):
-    """Return a list of info objects about serial ports"""
+    """Return a list of info objects about serial_ ports"""
     return list(iterate_comports())
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

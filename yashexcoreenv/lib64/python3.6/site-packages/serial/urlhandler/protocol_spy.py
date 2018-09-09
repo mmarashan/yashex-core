@@ -2,7 +2,7 @@
 #
 # This module implements a special URL handler that wraps an other port,
 # print the traffic for debugging purposes. With this, it is possible
-# to debug the serial port traffic on every application that uses
+# to debug the serial_ port traffic on every application that uses
 # serial_for_url.
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
@@ -18,7 +18,7 @@
 #
 # example:
 #   redirect output to an other terminal window on Posix (Linux):
-#   python -m serial.tools.miniterm spy:///dev/ttyUSB0?dev=/dev/pts/14\&color
+#   python -m serial_.tools.miniterm spy:///dev/ttyUSB0?dev=/dev/pts/14\&color
 
 import sys
 import time

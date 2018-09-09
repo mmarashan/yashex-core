@@ -1,6 +1,6 @@
 #!/home/maxim/py_yashex_core/yashexcoreenv/bin/python3
 #
-# Very simple serial terminal
+# Very simple serial_ terminal
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
 # (C)2002-2015 Chris Liechti <cliechti@gmx.net>
@@ -177,11 +177,11 @@ else:
 class Transform(object):
     """do-nothing: forward all data unchanged"""
     def rx(self, text):
-        """text received from serial port"""
+        """text received from serial_ port"""
         return text
 
     def tx(self, text):
-        """text to be sent to serial port"""
+        """text to be sent to serial_ port"""
         return text
 
     def echo(self, text):
@@ -333,7 +333,7 @@ def ask_for_port():
 
 class Miniterm(object):
     """\
-    Terminal application. Copy data from serial port to console and vice versa.
+    Terminal application. Copy data from serial_ port to console and vice versa.
     Handle special keys from the console to show menu etc.
     """
 
@@ -358,7 +358,7 @@ class Miniterm(object):
     def _start_reader(self):
         """Start reader thread"""
         self._reader_alive = True
-        # start serial->console thread
+        # start serial_->console thread
         self.receiver_thread = threading.Thread(target=self.reader, name='rx')
         self.receiver_thread.daemon = True
         self.receiver_thread.start()
@@ -374,7 +374,7 @@ class Miniterm(object):
         """start worker threads"""
         self.alive = True
         self._start_reader()
-        # enter console->serial loop
+        # enter console->serial_ loop
         self.transmitter_thread = threading.Thread(target=self.writer, name='tx')
         self.transmitter_thread.daemon = True
         self.transmitter_thread.start()
@@ -432,13 +432,13 @@ class Miniterm(object):
             pass
         sys.stderr.write('--- software flow control: {}\n'.format('active' if self.serial.xonxoff else 'inactive'))
         sys.stderr.write('--- hardware flow control: {}\n'.format('active' if self.serial.rtscts else 'inactive'))
-        sys.stderr.write('--- serial input encoding: {}\n'.format(self.input_encoding))
-        sys.stderr.write('--- serial output encoding: {}\n'.format(self.output_encoding))
+        sys.stderr.write('--- serial_ input encoding: {}\n'.format(self.input_encoding))
+        sys.stderr.write('--- serial_ output encoding: {}\n'.format(self.output_encoding))
         sys.stderr.write('--- EOL: {}\n'.format(self.eol.upper()))
         sys.stderr.write('--- filters: {}\n'.format(' '.join(self.filters)))
 
     def reader(self):
-        """loop and copy serial->console"""
+        """loop and copy serial_->console"""
         try:
             while self.alive and self._reader_alive:
                 # read all that is there or wait for one byte
@@ -458,7 +458,7 @@ class Miniterm(object):
 
     def writer(self):
         """\
-        Loop and copy console->serial until self.exit_character character is
+        Loop and copy console->serial_ until self.exit_character character is
         found. When self.menu_character is found, interpret the next key
         locally.
         """
@@ -620,7 +620,7 @@ class Miniterm(object):
         sys.stderr.write('--- filters: {}\n'.format(' '.join(self.filters)))
 
     def change_encoding(self):
-        """change encoding on the serial port"""
+        """change encoding on the serial_ port"""
         sys.stderr.write('\n--- Enter new encoding name [{}]: '.format(self.input_encoding))
         with self.console:
             new_encoding = sys.stdin.readline().strip()
@@ -632,8 +632,8 @@ class Miniterm(object):
             else:
                 self.set_rx_encoding(new_encoding)
                 self.set_tx_encoding(new_encoding)
-        sys.stderr.write('--- serial input encoding: {}\n'.format(self.input_encoding))
-        sys.stderr.write('--- serial output encoding: {}\n'.format(self.output_encoding))
+        sys.stderr.write('--- serial_ input encoding: {}\n'.format(self.input_encoding))
+        sys.stderr.write('--- serial_ output encoding: {}\n'.format(self.output_encoding))
 
     def change_baudrate(self):
         """change the baudrate"""
@@ -650,7 +650,7 @@ class Miniterm(object):
                 self.dump_port_settings()
 
     def change_port(self):
-        """Have a conversation with the user to change the serial port"""
+        """Have a conversation with the user to change the serial_ port"""
         with self.console:
             try:
                 port = ask_for_port()
@@ -760,12 +760,12 @@ def main(default_port=None, default_baudrate=9600, default_rts=None, default_dtr
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Miniterm - A simple terminal program for the serial port.")
+        description="Miniterm - A simple terminal program for the serial_ port.")
 
     parser.add_argument(
         "port",
         nargs='?',
-        help="serial port name ('-' to show port list)",
+        help="serial_ port name ('-' to show port list)",
         default=default_port)
 
     parser.add_argument(
@@ -826,7 +826,7 @@ def main(default_port=None, default_baudrate=9600, default_rts=None, default_dtr
         "--encoding",
         dest="serial_port_encoding",
         metavar="CODEC",
-        help="set the encoding for the serial port (e.g. hexlify, Latin1, UTF-8), default: %(default)s",
+        help="set the encoding for the serial_ port (e.g. hexlify, Latin1, UTF-8), default: %(default)s",
         default='UTF-8')
 
     group.add_argument(

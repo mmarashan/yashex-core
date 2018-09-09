@@ -134,7 +134,7 @@ class Serial(SerialBase):
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -173,7 +173,7 @@ class Serial(SerialBase):
 
     def write(self, data):
         """\
-        Output the given byte string over the serial port. Can block if the
+        Output the given byte string over the serial_ port. Can block if the
         connection is blocked. May raise SerialException if the connection is
         closed.
         """

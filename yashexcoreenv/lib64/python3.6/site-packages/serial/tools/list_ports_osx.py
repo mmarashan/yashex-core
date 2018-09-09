@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# This is a module that gathers a list of serial ports including details on OSX
+# This is a module that gathers a list of serial_ ports including details on OSX
 #
 # code originally from https://github.com/makerbot/pyserial/tree/master/serial/tools
 # with contributions from cibomahto, dgs3, FarMcKon, tedbrandston
@@ -229,7 +229,7 @@ def search_for_locationID_in_interfaces(serial_interfaces, locationID):
 
 def comports(include_links=False):
     # XXX include_links is currently ignored. are links in /dev even supported here?
-    # Scan for all iokit serial ports
+    # Scan for all iokit serial_ ports
     services = GetIOServicesByType('IOSerialBSDClient')
     ports = []
     serial_interfaces = scan_interfaces()
@@ -238,7 +238,7 @@ def comports(include_links=False):
         device = get_string_property(service, "IOCalloutDevice")
         if device:
             info = list_ports_common.ListPortInfo(device)
-            # If the serial port is implemented by IOUSBDevice
+            # If the serial_ port is implemented by IOUSBDevice
             usb_device = GetParentDeviceByType(service, "IOUSBDevice")
             if usb_device:
                 # fetch some useful informations from properties

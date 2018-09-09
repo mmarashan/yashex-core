@@ -29,4 +29,4 @@ class Message(models.Model):
         arduino_message.text = text
         arduino_message.type = type
         arduino_message.save()
-        print("Add new message from "+sender_address + ' : '+text)
+        print("Add new message from "+ sender_address + ' : '+text)

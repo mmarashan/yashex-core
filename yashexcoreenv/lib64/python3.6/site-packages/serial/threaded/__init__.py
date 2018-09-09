@@ -7,7 +7,7 @@
 #
 # SPDX-License-Identifier:    BSD-3-Clause
 """\
-Support threading with serial ports.
+Support threading with serial_ ports.
 """
 import serial
 import threading
@@ -23,11 +23,11 @@ class Protocol(object):
         """Called when reader thread is started"""
 
     def data_received(self, data):
-        """Called with snippets received from the serial port"""
+        """Called with snippets received from the serial_ port"""
 
     def connection_lost(self, exc):
         """\
-        Called when the serial port is closed or the reader loop terminated
+        Called when the serial_ port is closed or the reader loop terminated
         otherwise.
         """
         if isinstance(exc, Exception):
@@ -36,7 +36,7 @@ class Protocol(object):
 
 class Packetizer(Protocol):
     """
-    Read binary packets from serial port. Packets are expected to be terminated
+    Read binary packets from serial_ port. Packets are expected to be terminated
     with a TERMINATOR byte (null byte by default).
 
     The class also keeps track of the transport.
@@ -120,7 +120,7 @@ class FramedPacket(Protocol):
 
 class LineReader(Packetizer):
     """
-    Read and write (Unicode) lines from/to serial port.
+    Read and write (Unicode) lines from/to serial_ port.
     The encoding is applied.
     """
 
@@ -146,11 +146,11 @@ class LineReader(Packetizer):
 
 class ReaderThread(threading.Thread):
     """\
-    Implement a serial port read loop and dispatch to a Protocol instance (like
+    Implement a serial_ port read loop and dispatch to a Protocol instance (like
     the asyncio.Protocol) but do it with threads.
 
-    Calls to close() will close the serial port but it is also possible to just
-    stop() this thread and continue the serial port instance otherwise.
+    Calls to close() will close the serial_ port but it is also possible to just
+    stop() this thread and continue the serial_ port instance otherwise.
     """
 
     def __init__(self, serial_instance, protocol_factory):
@@ -195,7 +195,7 @@ class ReaderThread(threading.Thread):
                 # read all that is there or wait for one byte (blocking)
                 data = self.serial.read(self.serial.in_waiting or 1)
             except serial.SerialException as e:
-                # probably some I/O problem such as disconnected USB serial
+                # probably some I/O problem such as disconnected USB serial_
                 # adapters -> exit
                 error = e
                 break
@@ -217,7 +217,7 @@ class ReaderThread(threading.Thread):
             self.serial.write(data)
 
     def close(self):
-        """Close the serial port and exit reader thread (uses lock)"""
+        """Close the serial_ port and exit reader thread (uses lock)"""
         # use the lock to let other threads finish writing
         with self._lock:
             # first stop reading, so that closing can be done on idle port

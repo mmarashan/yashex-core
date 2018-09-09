@@ -1,0 +1,108 @@
+[
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "admin",
+                    "type": "address"
+                }
+            ],
+            "name": "addAdmin",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "uint256"
+                },
+                {
+                    "name": "seller",
+                    "type": "address"
+                },
+                {
+                    "name": "buyer",
+                    "type": "address"
+                },
+                {
+                    "name": "box",
+                    "type": "address"
+                }
+            ],
+            "name": "addBargain",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "bargainId",
+                    "type": "uint256"
+                },
+                {
+                    "name": "time",
+                    "type": "uint256"
+                },
+                {
+                    "name": "status",
+                    "type": "uint256"
+                }
+            ],
+            "name": "addHistoryItem",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "bargainId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tryToResolveBargain",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBargainStateById",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]

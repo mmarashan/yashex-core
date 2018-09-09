@@ -1,7 +1,7 @@
 #! python
 #
 # This module implements a RFC2217 compatible client. RF2217 descibes a
-# protocol to access serial ports over TCP/IP and allows setting the baud rate,
+# protocol to access serial_ ports over TCP/IP and allows setting the baud rate,
 # modem control lines etc.
 #
 # This file is part of pySerial. https://github.com/pyserial/pyserial
@@ -374,7 +374,7 @@ class TelnetSubnegotiation(object):
 
 
 class Serial(SerialBase):
-    """Serial port implementation for RFC 2217 remote serial ports."""
+    """Serial port implementation for RFC 2217 remote serial_ ports."""
 
     BAUDRATES = (50, 75, 110, 134, 150, 200, 300, 600, 1200, 1800, 2400, 4800,
                  9600, 19200, 38400, 57600, 115200)
@@ -601,7 +601,7 @@ class Serial(SerialBase):
 
     def read(self, size=1):
         """\
-        Read size bytes from the serial port. If a timeout is set it may
+        Read size bytes from the serial_ port. If a timeout is set it may
         return less characters as requested. With no timeout it will block
         until the requested number of bytes is read.
         """
@@ -622,7 +622,7 @@ class Serial(SerialBase):
 
     def write(self, data):
         """\
-        Output the given byte string over the serial port. Can block if the
+        Output the given byte string over the serial_ port. Can block if the
         connection is blocked. May raise SerialException if the connection is
         closed.
         """
@@ -931,7 +931,7 @@ class Serial(SerialBase):
 
 class PortManager(object):
     """\
-    This class manages the state of Telnet and RFC 2217. It needs a serial
+    This class manages the state of Telnet and RFC 2217. It needs a serial_
     instance and a connection to work with. Connection is expected to implement
     a (thread safe) write function, that writes the string to the network.
     """
@@ -1005,7 +1005,7 @@ class PortManager(object):
 
     def check_modem_lines(self, force_notification=False):
         """\
-        read control lines from serial port and compare the last value sent to remote.
+        read control lines from serial_ port and compare the last value sent to remote.
         send updates on changes.
         """
         modemstate = (
@@ -1066,8 +1066,8 @@ class PortManager(object):
 
         for byte in filter(socket.recv(1024)):
             # do things like CR/LF conversion/whatever
-            # and write data to the serial port
-            serial.write(byte)
+            # and write data to the serial_ port
+            serial_.write(byte)
 
         (socket error handling code left as exercise for the reader)
         """
