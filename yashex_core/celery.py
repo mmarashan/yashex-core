@@ -22,7 +22,7 @@ def setup_periodic_tasks(sender, **kwargs):
     print('setup_periodic_celety_tasks')
     sender.add_periodic_task(600.0, read_yashik_message.s(None), name='set_ddns_url')
     sender.add_periodic_task(60.0, read_yashik_message.s(None), name='read_yashik_message')
-    sender.check_bargains_status(10.0, read_yashik_message.s(None), name='check_bargains_status')
+    sender.add_periodic_task(10.0, read_yashik_message.s(None), name='check_bargains_status')
 
 @celery_app.task
 def read_yashik_message(args):
