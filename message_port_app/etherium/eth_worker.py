@@ -15,8 +15,6 @@ class EthWorker():
     contract_address = '0xfa6f82e8953e3b1a03c274859cdf9f4fbc8b17e5'
     base_address = '0x337DA5Fa7381b1345C273f5702C2Fc1f369e19F0'
     base_pk = '53fc2d4d56d4decaf3afe320e0d12d264574426a9f565f93cb91ba6dc0388745'
-    abi_source_path = 'contract_abi.txt'
-    #contract_source_path = '/home/maxim/py_yashex_core/message_port_app/etherium/contract.sol'
     w3 = None
     compiled_sol = None
     contract_id = None
@@ -31,11 +29,14 @@ class EthWorker():
         EthWorker.w3 = Web3(HTTPProvider('https://rinkeby.infura.io/v3/41da39ce9cfc46cd98721b029811d43f'))
         # inject the poa compatibility middleware to the innermost layer
         EthWorker.w3.middleware_stack.inject(geth_poa_middleware, layer=0)
-        compiled_sol = EthWorker.compile_source_file()
-        contract_id, contract_interface = compiled_sol.popitem()
+        #compiled_sol = EthWorker.compile_source_file()
+        #contract_id, contract_interface = compiled_sol.popitem()
+        abi_text = EthWorker.abi
         EthWorker.store_var_contract = EthWorker.w3.eth.contract(
             address= EthWorker.w3.toChecksumAddress(EthWorker.contract_address),
-            abi=contract_interface['abi'])
+            #abi=contract_interface['abi']
+            abi=abi_text
+        )
 
 
     @staticmethod
@@ -109,7 +110,7 @@ class EthWorker():
         gas_estimate = EthWorker.store_var_contract.functions.addHistoryItem(bargain_id, timestamp, 123).estimateGas()
 
 
-        private_key = EthWorker.get_keys_param('private_key')
+        private_key = EthWorker.base_pk#EthWorker.get_keys_param('private_key')
         acct = EthWorker.w3.eth.account.privateKeyToAccount(private_key)
         #signed_txn = EthWorker.w3.eth.account.signTransaction(tx, private_key=private_key)
         #EthWorker.w3.eth.sendRawTransaction(signed_txn.rawTransaction)
@@ -207,3 +208,114 @@ contract Yashchex {
     }
 }
     '''
+
+    abi = '''
+      [
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "admin",
+                    "type": "address"
+                }
+            ],
+            "name": "addAdmin",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "uint256"
+                },
+                {
+                    "name": "seller",
+                    "type": "address"
+                },
+                {
+                    "name": "buyer",
+                    "type": "address"
+                },
+                {
+                    "name": "box",
+                    "type": "address"
+                }
+            ],
+            "name": "addBargain",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "bargainId",
+                    "type": "uint256"
+                },
+                {
+                    "name": "time",
+                    "type": "uint256"
+                },
+                {
+                    "name": "status",
+                    "type": "uint256"
+                }
+            ],
+            "name": "addHistoryItem",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "bargainId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "tryToResolveBargain",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBargainStateById",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+        '''

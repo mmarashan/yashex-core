@@ -48,8 +48,8 @@ def set_ddns_url(args):
 @celery_app.task
 def check_bargains_status(args):
     EthWorker.init_contract()
-    print("OK init ETHContract")
+    print("check_bargains_status: OK init ETHContract")
     contract_state = EthWorker.getBargainStateById()
-    print("contract_state :" + str(contract_state))
+    print("check_bargains_status contract_state :" + str(contract_state))
     if (contract_state == 'True'):
         ArduinoClient.unlock()

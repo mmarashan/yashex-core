@@ -1,61 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="310f6fb2-1b3f-4d2b-92af-79856c691e5a" name="Default Changelist" comment="Рабочая версия ArduinoPort через библиотеку виртуального окружения Хакатон">
-      <change afterPath="$PROJECT_DIR$/ddns/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_solc.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/bargain_id.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/base_wallet.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/contract.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/contract_abi.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/eth_worker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/eth_worker_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message_port_app/etherium/keys.json" afterDir="false" />
+    <list default="true" id="310f6fb2-1b3f-4d2b-92af-79856c691e5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddns/ddns_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/ddns/ddns_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_port_app/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_port_app/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_port_app/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_port_app/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_port_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_port_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install_solc.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_port_app/etherium/contract.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_port_app/etherium/contract_abi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/message_port_app/etherium/eth_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/message_port_app/etherium/eth_worker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yashex_core/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashex_core/celery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/bin/miniterm.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/bin/miniterm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/amqp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/amqp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/celery/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/celery/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/celery/security/certificate.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/celery/security/certificate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/base/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/base/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/postgresql/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/postgresql/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/postgresql/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/django/db/backends/postgresql/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/kombu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/kombu/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/pyserial-3.4.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/pyserial-3.4.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/vine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib/python3.6/site-packages/vine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/amqp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/amqp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/celery/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/celery/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/celery/security/certificate.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/celery/security/certificate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/base/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/base/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/postgresql/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/postgresql/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/postgresql/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/django/db/backends/postgresql/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/kombu/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/kombu/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/aio.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/aio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/rfc2217.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/rfc2217.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/rs485.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/rs485.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialcli.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialcli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialjava.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialjava.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialposix.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialposix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialutil.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialutil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialwin32.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/serialwin32.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/threaded/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/threaded/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_linux.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_osx.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_osx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_posix.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_posix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/list_ports_windows.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/miniterm.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/tools/miniterm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_alt.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_alt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_loop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_socket.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_socket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_spy.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/serial/urlhandler/protocol_spy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/vine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yashexcoreenv/lib64/python3.6/site-packages/vine/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +37,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="5" />
+          <entry key="celerybeat-schedule" value="1" />
           <entry key="conf" value="2" />
           <entry key="env" value="2" />
           <entry key="gitignore" value="2" />
@@ -94,7 +49,7 @@
           <entry key="py" value="78" />
           <entry key="sh" value="1" />
           <entry key="sol" value="3" />
-          <entry key="txt" value="34" />
+          <entry key="txt" value="37" />
           <entry key="yml" value="6" />
         </counts>
       </usages-collector>
@@ -103,7 +58,7 @@
           <entry key="HTML" value="2" />
           <entry key="JSON" value="12" />
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="PLAIN_TEXT" value="61" />
           <entry key="Python" value="76" />
           <entry key="YAML" value="6" />
         </counts>
@@ -119,9 +74,9 @@
           <entry key="html" value="85" />
           <entry key="json" value="66" />
           <entry key="md" value="137" />
-          <entry key="py" value="5171" />
+          <entry key="py" value="5230" />
           <entry key="sh" value="20" />
-          <entry key="txt" value="537" />
+          <entry key="txt" value="573" />
           <entry key="yml" value="113" />
         </counts>
       </usages-collector>
@@ -130,8 +85,8 @@
           <entry key="HTML" value="85" />
           <entry key="JSON" value="66" />
           <entry key="Markdown" value="137" />
-          <entry key="PLAIN_TEXT" value="675" />
-          <entry key="Python" value="5215" />
+          <entry key="PLAIN_TEXT" value="711" />
+          <entry key="Python" value="5274" />
           <entry key="YAML" value="113" />
         </counts>
       </usages-collector>
@@ -139,11 +94,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yashex_core/celery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="e#28#37#0" expanded="true" />
               </folding>
@@ -167,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/message_port_app/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -175,19 +130,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/message_port_app/etherium/eth_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+            <state relative-caret-position="129">
+              <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1536467362438" expanded="true" signature="1538:1545" ph="..." />
-                <marker date="1536467362438" expanded="true" signature="1539:1540" ph="..." />
-                <marker date="1536467362438" expanded="true" signature="1992:1998" ph="..." />
-                <marker date="1536467362438" expanded="true" signature="2717:2745" ph="..." />
-                <marker date="1536467362438" expanded="true" signature="3584:3597" ph="..." />
-                <marker date="1536467362438" expanded="true" signature="3939:3948" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="1471:1478" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="1472:1473" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="1925:1931" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="2650:2678" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="3517:3530" ph="..." />
+                <marker date="1536473359522" expanded="true" signature="3872:3881" ph="..." />
               </folding>
             </state>
           </provider>
@@ -196,17 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install_solc.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="60">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -282,15 +228,15 @@
         <option value="$PROJECT_DIR$/message_port_app/etherium/contract.sol" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/ddns/ddns_sender.py" />
-        <option value="$PROJECT_DIR$/yashex_core/celery.py" />
         <option value="$PROJECT_DIR$/message_port_app/etherium/bargain_id.txt" />
         <option value="$PROJECT_DIR$/message_port_app/etherium/keys.json" />
         <option value="$PROJECT_DIR$/message_port_app/etherium/base_wallet.json" />
         <option value="$PROJECT_DIR$/message_port_app/etherium/eth_worker_test.py" />
-        <option value="$PROJECT_DIR$/message_port_app/etherium/eth_worker.py" />
         <option value="$PROJECT_DIR$/install_solc.sh" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/message_port_app/api/views.py" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/message_port_app/etherium/eth_worker.py" />
+        <option value="$PROJECT_DIR$/yashex_core/celery.py" />
       </list>
     </option>
   </component>
@@ -317,6 +263,18 @@
               <item name="py_yashex_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="py_yashex_core" type="462c0819:PsiDirectoryNode" />
               <item name="message_port_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py_yashex_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py_yashex_core" type="462c0819:PsiDirectoryNode" />
+              <item name="message_port_app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py_yashex_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py_yashex_core" type="462c0819:PsiDirectoryNode" />
+              <item name="message_port_app" type="462c0819:PsiDirectoryNode" />
+              <item name="etherium" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -487,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536394953140</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Заливаю в Raspbery. ver 0.5 Хакатон">
+      <created>1536471677522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1536471677522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -501,19 +466,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21708465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21708465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4992163" weight="0.32784185" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33558178" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3344209" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970346" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992163" weight="0.3288364" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4992163" weight="0.32715008" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4976489" visible="true" weight="0.35073408" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4976489" weight="0.35073408" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007837" side_tool="true" weight="0.32784185" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3294893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -555,12 +521,10 @@
     <MESSAGE value="Доробоатать чтение сообщения. Логика ящика переделана на пищалку. Добавить функцию сброса состояния и открытие через API. Хакатон" />
     <MESSAGE value="Рабочая версия ArduinoPort через библиотеку виртуального окружения Хакатон" />
     <MESSAGE value="Рабочая версия ArduinoPort через перенесенный в проект код библиотеки Хакатон" />
-    <option name="LAST_COMMIT_MESSAGE" value="Рабочая версия ArduinoPort через перенесенный в проект код библиотеки Хакатон" />
+    <MESSAGE value="Заливаю в Raspbery. ver 0.5 Хакатон" />
+    <option name="LAST_COMMIT_MESSAGE" value="Заливаю в Raspbery. ver 0.5 Хакатон" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/prod.env">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/message_port_app/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -760,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bargain_id.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ddns/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -797,27 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/contract_abi.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="96" column="40" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/message_port_app/etherium/base_wallet.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="175" selection-start-column="175" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yashex_core/celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-          <folding>
-            <element signature="e#28#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,13 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="151" selection-start-column="151" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/bargain_id.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -863,20 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/eth_worker_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hard_port/arduino_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -890,25 +809,75 @@
     <entry file="file://$PROJECT_DIR$/message_port_app/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/contract_abi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/bargain_id.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bargain_id.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message_port_app/etherium/eth_worker_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/celerybeat-schedule">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/message_port_app/etherium/eth_worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="129">
+          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1536467362438" expanded="true" signature="1538:1545" ph="..." />
-            <marker date="1536467362438" expanded="true" signature="1539:1540" ph="..." />
-            <marker date="1536467362438" expanded="true" signature="1992:1998" ph="..." />
-            <marker date="1536467362438" expanded="true" signature="2717:2745" ph="..." />
-            <marker date="1536467362438" expanded="true" signature="3584:3597" ph="..." />
-            <marker date="1536467362438" expanded="true" signature="3939:3948" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="1471:1478" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="1472:1473" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="1925:1931" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="2650:2678" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="3517:3530" ph="..." />
+            <marker date="1536473359522" expanded="true" signature="3872:3881" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yashex_core/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding>
+            <element signature="e#28#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
