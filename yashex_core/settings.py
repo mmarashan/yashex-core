@@ -26,7 +26,7 @@ SECRET_KEY = 'v)5mu&_gbf5au_cz$pc0f=qiee-o8-o5w8)l+h)z@2i+8v74!i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cryptoopensoul.ru']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 CONTRIB_APPS = [
@@ -40,6 +40,7 @@ CONTRIB_APPS = [
 
 VENDOR_APPS = [
     'rest_framework',
+    'corsheaders',
 ]
 
 APPS = [
@@ -58,12 +59,14 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'yashex_core.urls'
 
@@ -146,3 +149,5 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 
 BROKER_URL = 'amqp://guest:guest@mq:5672/'
+
+CORS_ORIGIN_ALLOW_ALL=True

@@ -2,7 +2,8 @@ version: '2'
 services:
 
   mq:
-    image: ronnyroos/rpi-rabbitmq
+    image: rabbitmq:management-alpine
+    #image: ronnyroos/rpi-rabbitmq
     ports:
       - "5672:5672"
 

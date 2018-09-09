@@ -22,3 +22,4 @@ web3
 eth_account
 py-solc
 eth_tester
+django-cors-headers
